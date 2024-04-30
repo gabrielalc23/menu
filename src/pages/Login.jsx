@@ -18,8 +18,8 @@ const Login = () => {
         <>
             <Container className="mt-4">
                 <Card>
-                    <Card.Header>Form Login</Card.Header>
-                    <Card.Body className="p-5">
+                    <Card.Header className="bg-dark text-white">Form Login</Card.Header>
+                    <Card.Body className="p-5 bg-dark">
                         <Form onSubmit={submitForm} method="get">
                             <Form.Label className="mt-4">Email</Form.Label>
                             <Form.Control type="email" placeholder="Insira seu email" required/>
@@ -32,13 +32,13 @@ const Login = () => {
                                     value={password}
                                     onChange={e => setPassword(e.target.value)}
                                 />
-                                <span className="input-group-text" onClick={handlePasswordVisibility}>
+                                <Button variant="dark" className="input-group-text" onClick={handlePasswordVisibility}>
                                     {visible? <EyeOutlined /> : <EyeInvisibleOutlined />}
-                                </span>
+                                </Button>
                             </div>
                         </Form>
                     </Card.Body>
-                    <Card.Footer>
+                    <Card.Footer className="bg-dark">
                                 <Button
                                     type="submit"
                                     variant="danger"
