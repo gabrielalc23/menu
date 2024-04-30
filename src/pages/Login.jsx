@@ -21,9 +21,9 @@ const Login = () => {
                     <Card.Header className="bg-dark text-white">Form Login</Card.Header>
                     <Card.Body className="p-5 bg-dark">
                         <Form onSubmit={submitForm} method="get">
-                            <Form.Label className="mt-4">Email</Form.Label>
+                            <Form.Label className="mt-4 text-white">Email</Form.Label>
                             <Form.Control type="email" placeholder="Insira seu email" required/>
-                            <Form.Label className="mt-2">Senha</Form.Label>
+                            <Form.Label className="mt-2 text-white">Senha</Form.Label>
                             <div className="input-group">
                                 <Form.Control 
                                     type={visible? "text" : "password"} 
@@ -32,7 +32,7 @@ const Login = () => {
                                     value={password}
                                     onChange={e => setPassword(e.target.value)}
                                 />
-                                <Button variant="dark" className="input-group-text" onClick={handlePasswordVisibility}>
+                                <Button variant="warning" className="input-group-text" onClick={handlePasswordVisibility}>
                                     {visible? <EyeOutlined /> : <EyeInvisibleOutlined />}
                                 </Button>
                             </div>
